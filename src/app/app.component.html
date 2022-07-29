@@ -1,9 +1,13 @@
 <div class="po-wrapper">
-  <po-toolbar p-title="AppName"></po-toolbar>
+    <po-toolbar p-title="Consulta de Produtos"></po-toolbar>
+    
+    <po-menu [p-menus]="menus" [p-filter]="true"></po-menu>
 
-  <po-menu [p-menus]="menus"></po-menu>
+    <po-page-dynamic-search 
+        p-title="Consulta de Produtos!" [p-filters]="[{ property: 'name' }]"> 
+    
+    <po-table [p-columns]="colunas" [p-items]="produtos"> </po-table>
+        
+    </po-page-dynamic-search>
 
-  <po-page-default p-title="AppName">
-    <p> AppName page </p>
-  </po-page-default>
 </div>
